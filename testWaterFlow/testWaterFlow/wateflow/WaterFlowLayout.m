@@ -61,13 +61,10 @@
                 
                
                     
-                    UICollectionViewLayoutAttributes *attributes =
-                    [UICollectionViewLayoutAttributes layoutAttributesForCellWithIndexPath:[NSIndexPath indexPathForItem:index inSection:i]];
-                    
-                    
-                    
-                    
-                    attributes.frame = CGRectMake([_delegate collectionView:self.collectionView layout:self insetForSectionAtIndex:i].left+(_width+[_delegate collectionView:self.collectionView layout:self hSpacingForSectionAtIndex:i])*col,_vSpace+_height+[_delegate collectionView:self.collectionView layout:self insetForSectionAtIndex:i].top ,_width,_width/[_delegate collectionView:self.collectionView layout:self aspectrRatioForItemAtIndexPath:[NSIndexPath indexPathForItem:index inSection:i]]);
+                UICollectionViewLayoutAttributes *attributes =
+                [UICollectionViewLayoutAttributes layoutAttributesForCellWithIndexPath:[NSIndexPath indexPathForItem:index inSection:i]];
+                
+                attributes.frame = CGRectMake([_delegate collectionView:self.collectionView layout:self insetForSectionAtIndex:i].left+(_width+[_delegate collectionView:self.collectionView layout:self hSpacingForSectionAtIndex:i])*col,_vSpace+_height+[_delegate collectionView:self.collectionView layout:self insetForSectionAtIndex:i].top ,_width,_width/[_delegate collectionView:self.collectionView layout:self aspectrRatioForItemAtIndexPath:[NSIndexPath indexPathForItem:index inSection:i]]);
                 
                 attributes.size = CGSizeMake(_width, _width/[_delegate collectionView:self.collectionView layout:self aspectrRatioForItemAtIndexPath:[NSIndexPath indexPathForItem:index inSection:i]]);
                     attributes.hidden = NO;
